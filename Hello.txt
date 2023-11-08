@@ -2,5 +2,6 @@ public class HelloWorld {
 	public static void main (String[]args){
 		System.out.println ("Hello, My name is Natthachak");
 		System.out.println ("Hello, My name is Nannaphat");
+		System.out.println ("Hello, My Name is Phuthanes");
 	}
 }
