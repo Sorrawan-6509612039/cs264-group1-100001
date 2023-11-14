@@ -19,29 +19,157 @@
 </head>
 
 <body>
-    <div class="header">
-        <img src="logotu.png" class="img1">
-        <h1>Thammasat University</h1>
-        <div class="profile">
-            <label>6501112345</label><br>
-            <label>นายบัญชี มีสุข</label>
-        </div>
-        <img src="profile.png" class="img2">
+<div class="header">
+    <img src="logotu.png" class="img1">
+    <h1>Thammasat University</h1>
+    <div class="profile">
+        <label>6501112345</label><br>
+        <label>นายบัญชี มีสุข</label>
     </div>
-    <div class="left-sidebar"></div>
-    <div class="content">
-        <input type="submit" id="firstpage" name="firstpage" value="หน้าแรก"><br>
-        <input type="submit" id="fill" name="fill" value="ยื่นคำร้อง" onclick="submitForm()"><br>
-        <input type="submit" id="nfile" name="nfile" value="แนบเอกเอกสารเพิ่มเติม"><br>
-        <input type="submit" id="follow" name="follow" value="การติดตามสถานะ"><br>
-        <input type="submit" id="signout" name="signout" value="ออกจากระบบ"><br>
-    </div>
+    <img src="profile.png" class="img2">
+</div>
+<div class="left-sidebar"></div>
+<div class="content">
+    <input type="submit" id="firstpage" name="firstpage" value="หน้าแรก"><br>
+    <input type="submit" id="fill" name="fill" value="ยื่นคำร้อง" onclick="submitForm()"><br>
+    <input type="submit" id="nfile" name="nfile" value="แนบเอกเอกสารเพิ่มเติม"><br>
+    <input type="submit" id="follow" name="follow" value="การติดตามสถานะ"><br>
+    <input type="submit" id="signout" name="signout" value="ออกจากระบบ"><br>
+</div>
 
-    <div class="data">
-        <p>คำร้องขอถอนวิชา/ถอนรายวิชา (Drop W)</p>
-        <!--คำร้องขอถอนวิชา/ถอนรายวิชา (Drop W)-->
-    </div>
+<div>
+    <div class="header1"><h1>เขียนคำร้อง</h1></div>
+    <div class="header2"><h2>คำร้องขอเพิ่ม-ถอน รายวิชา</h2></div>
+    <div class="header3"><h3>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h3></div>
+</div>
 
+<div class="data detail">
+    <b>เรื่อง &nbsp;  คำร้องขอถอนวิชา / ถอนรายวิชา (Drop W)</b></label><br>
+    เรียน &nbsp;  คณบดีคณะวิทยาศาสตร์และเทคโนโลยี</label><br>
+
+    <br>
+    <label for="nameTitle">คำนำหน้า</label>
+    <span class="text-with-space"><select id="nameTitle" name="nameTitle">
+            <option value=""disabled selected></option>
+            <option value="option1">นาย</option>
+            <option value="option2">นาง</option>
+            <option value="option3">นางสาว</option>
+        </select></span>
+
+    <label for="studentFirstName">ชื่อ</label>
+    <span class="text-with-space"><input type="text" id="studentFirstName" name="studentFirstName" required></span>
+
+    <label for="studentLastName">นามสกุล</label>
+    <span class="text-with-space"><input type="text" id="studentLastName" name="studentLastName" required></span>
+
+    <label for="studentId">รหัสนัักศึกษา</label>
+    <input type="text" placeholder="รหัส10 หลัก" name="studentId" id="studentId" required>
+
+    <p class="line-bottom-space"></p>
+
+    <label for="studentYear">ชั้นปีที่</label>
+    <span class="text-with-space selectSize"><select id="studentYear" name="studentYear">
+            <option value=""disabled selected></option>
+            <option value="option1">1</option>
+            <option value="option2">2</option>
+            <option value="option3">3</option>
+            <option value="option4">4</option>
+            <option value="option5">5</option>
+            <option value="option6">6</option>
+            <option value="option7">7</option>
+        </select></span>
+
+    <label for="studentField">สาขาวิชา</label>
+    <span class="text-with-space"><select id="studentField" name="studentField" required>
+            <option value=""disabled selected></option>
+            <option value="option1">สถิติ</option>
+            <option value="option2">คณิตศาสตร์</option>
+            <option value="option3">คณิตศาสตร์ประยุกต์</option>
+            <option value="option4">เคมี</option>
+            <option value="option5">เทคโนโลยีการเกษตร</option>
+            <option value="option6">เทคโนโลยีเพื่อการพัฒนายั่งยืน</option>
+            <option value="option7">เทคโนโลยีชีวภาพ</option>
+            <option value="option8">ฟิสิกส์อิเล็กทรอนิกส์</option>
+            <option value="option9">ฟิสิกส์</option>
+            <option value="option10">วัสดุศาสตร์</option>
+            <option value="option11">วิทยาการคอมพิวเตอร์</option>
+            <option value="option12">วิทยาศาสตร์สิ่งแวดล้อม</option>
+            <option value="option13">วิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+            <option value="option14">วิทยาศาสตร์และนวัตกรรมทางอาหาร</option>
+            <option value="option15">วิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option>
+        </select></span>
+
+    <p class="line-bottom-space"></p>
+
+    <label for="addressNumber">ที่อยู่บ้านเลขที่</label>
+    <span class="text-with-space"><input type="text" name="addressNumber" id="addressNumber" required></span>
+
+    <label for="moo">หมู่ที่</label>
+    <span class="text-with-space"><input type="text" id="moo" name="moo" required></span>
+
+    <label for="tumbol">ตำบล</label>
+    <span class="text-with-space"><input type="text" id="tumbol" name="tumbol" required></span>
+
+    <label for="amphur">อำเภอ</label>
+    <span class="text-with-space"><input type="text" id="amphur" name="amphur" required></span>
+
+    <p class="line-bottom-space"></p>
+
+    <label for="province">จังหวัด</label>
+    <span class="text-with-space"><input type="text" id="province" name="province" required></span>
+
+    <label for="postalcode">รหัสไปรษณีย์</label>
+    <span class="text-with-space"><input type="text"  placeholder="เลข 5 หลัก" id="postalcode" name="postalcode" required></span>
+
+    <label for="mobilePhone">เบอร์โทรศัพท์มือถือ</label>
+    <span class="text-with-space"><input type="tel"  placeholder="เลข 10 หลัก"id="mobilePhone" name="mobilePhone" required></span>
+
+    <p class="line-bottom-space"></p>
+
+    <label for="phone">เบอร์โทรศัพท์บ้าน</label>
+    <span class="text-with-space"><input type="tel" placeholder="เลข 10 หลัก" id="phone" name="phone"></span>
+
+    <label for="advisor">อาจารย์ที่ปรึกษา</label>
+    <span class="text-with-space"><input type="text" id="advisor" name="advisor" required></span><br>
+
+    <br><br><br>
+
+    <span class="text-with-space"><b>ขอยื่นคำร้องขอถอนวิชา / ถอนรายวิชา (Drop W)</b></label></span>
+
+    <label for="subject">วิชา</label>
+    <span class="text-with-space"><input type="text" id="subject" name="subject" required></span>
+
+    <label for="teacher">อาจารย์ผู้สอน</label>
+    <span class="text-with-space"><input type="text" id="teacher" name="teacher" required></span>
+
+    <label for="center">ศูนย์</label>
+    <select id="center" name="center">
+        <option value=""disabled selected></option>
+        <option value="option1">ท่าพระจันทร์</option>
+        <option value="option2">ศูนย์รังสิต</option>
+        <option value="option3">ศูนย์พัทยา</option>
+        <option value="option4">ศูนย์ลำปาง</option>
+    </select>
+
+    <p class="line-bottom-space"></p>
+
+    <label for="cause">รายละเอียด</label><br>
+    <textarea id="cause" name="cause" rows="6" cols="106" required></textarea><br>
+
+    <p class="line-bottom-space"></p>
+
+    <span class="text-with-space"><label for="fileInput">แนบเอกสาร</label></span>
+    <input type="file" id="fileInput" name="fileInput">
+
+    <p class="line-bottom-space"></p>
+
+    <div class="submitButton"><input type="submit" id="submitRequest" name="submitRequest" value="ส่งคำร้อง"><br></div>
+    <br>
+</div>
+
+<div class="split-line">
+    <hr>
+</div>
 </body>
 
 </html>

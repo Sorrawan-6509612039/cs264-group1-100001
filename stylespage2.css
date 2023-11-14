@@ -4,3 +4,72 @@
     position: fixed;
     z-index: 3;
 }
+
+.center-container {
+    display: flex;
+    justify-content: center;
+
+    margin-left: 640px;
+    z-index: 3;
+}
+
+.nl {
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.center-text {
+        text-align: center;
+}
+
+.header1 {
+    margin-left: 850px;
+    margin-top: -340px;
+}
+
+.header2 {
+    position: relative;
+    margin-left: 790px;
+    margin-top: 20px;
+}
+
+.header3 {
+    position: relative;
+    margin-left: 680px;
+    margin-top: 20px;
+}
+
+.submitButton {
+      position: relative;
+         margin-left: 470px;
+         margin-top: 20px;
+}
+
+.detail {
+    position: relative;
+    top: 380px;
+}
+
+select {
+      font-size: 15px;
+      padding: 1px;
+}
+
+ .text-with-space {
+      margin-right: 20px;
+}
+
+.line-bottom-space {
+      margin-bottom: 20px;
+}
+
+.split-line{
+    margin-top: 7px;
+}
+
+hr {
+      border: -1px solid black;
+      border-width: 1px 0;
+      margin: 1px 0;
+      font-weight: normal;
+}
