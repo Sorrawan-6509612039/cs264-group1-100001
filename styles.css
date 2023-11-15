@@ -60,7 +60,7 @@ body {
     font-size: 45px;
     margin-left: 370px;
     margin-top: -340px;
-    position: fixed;
+    position: absolute;
     z-index: 3;
 }
 
