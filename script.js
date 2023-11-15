@@ -33,7 +33,7 @@ function changePage(values) {
        var studentID = document.getElementById("studentId").value;
        var mobilePhone = document.getElementById("mobilePhone").value;
        var postalcode = document.getElementById("postalcode").value;
-
+       var phone = document.getElementById("phone").value;
 
 
        if (studentID.length !== 10 || isNaN(studentID)) {
@@ -49,6 +49,13 @@ function changePage(values) {
        if (mobilePhone.length !== 10 || isNaN(mobilePhone)) {
            alert("กรุณากรอกเบอร์โทรศัพท์มือถือเป็นตัวเลข 10 หลัก");
            return false;
+       }
+
+       if (phone !== ""){
+           if (phone.length !== 10 || isNaN(phone)){
+               alert("กรุณากรอกเบอร์โทรศัพท์บ้านเป็นตัวเลข 10 หลัก");
+               return false;
+           }       
        }
 
 
