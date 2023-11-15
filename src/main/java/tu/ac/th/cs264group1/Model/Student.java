@@ -2,6 +2,7 @@ package tu.ac.th.cs264group1.Model;
 
 public class Student {
     private String date;
+
     private String nameTitle;
     private String studentFirstName;
     private String studentLastName;
@@ -76,11 +77,11 @@ public class Student {
         this.advisor = advisor;
     }
 
-    public String getHomePhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setHomePhone(String phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -180,14 +181,13 @@ public class Student {
         this.studentFirstName = studentFirstName;
     }
 
-    public String getTitle() {
+    public String getNameTitle() {
         return nameTitle;
     }
 
-    public void setTitle(String nameTitle) {
+    public void setNameTitle(String nameTitle) {
         this.nameTitle = nameTitle;
     }
-
     public String getDate() {
         return date;
     }

@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Cs264Group1Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Cs264Group1Application.class, args);
 	}
 
