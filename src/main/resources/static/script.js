@@ -1,6 +1,4 @@
 function submitForm() {
-    // Add your form submission logic here
-    // Example: You can redirect back to the current page
     window.location.href = 'index.html';
 }
 
@@ -51,15 +49,76 @@ function changePage(values) {
            return false;
        }
 
-
-
        finishSubmit();
        return true;
    }
 
 
     function finishSubmit() {
-        window.location.href = "finish.html";
-        alert("Form submitted successfully!");
+        var date = document.getElementById("date").value;
+        var nameTitle = document.getElementById("nameTitle").value;
+        var studentFirstName = document.getElementById("studentFirstName").value;
+        var studentLastName = document.getElementById("studentLastName").value;
+        var studentId = document.getElementById("studentId").value;
+        var studentYear = document.getElementById("studentYear").value;
+        var studentField = document.getElementById("studentField").value;
+        var addressNumber = document.getElementById("addressNumber").value;
+        var moo = document.getElementById("moo").value;
+        var tumbol = document.getElementById("tumbol").value;
+        var amphur = document.getElementById("amphur").value;
+        var province = document.getElementById("province").value;
+        var postalcode = document.getElementById("postalcode").value;
+        var mobilePhone = document.getElementById("mobilePhone").value;
+        var phone = document.getElementById("phone").value;
+        var advisor = document.getElementById("advisor").value;
+        var subject = document.getElementById("subject").value;
+        var teacher = document.getElementById("teacher").value;
+        var center = document.getElementById("center").value;
+        var cause = document.getElementById("cause").value;
+
+        var formData = {
+           date: date,
+           nameTitle: nameTitle,
+           studentFirstName: studentFirstName,
+           studentLastName: studentLastName,
+           studentId: studentId,
+           studentYear: studentYear,
+           studentField: studentField,
+           addressNumber: addressNumber,
+           moo: moo,
+           tumbol: tumbol,
+           amphur: amphur,
+           province: province,
+           postalcode: postalcode,
+           mobilePhone: mobilePhone,
+           phone: phone,
+           advisor: advisor
+           subject: subject,
+           teacher: teacher,
+           center: center,
+           cause: cause
+
+        };
+
+          fetch("http://localhost:5050/users/save", {
+             method: "POST",
+             headers: {
+                 "Content-Type": "application/json"
+             },
+             body: JSON.stringify(formData)
+         })
+             .then(response => response.json())
+             .then(data =>{
+                console.log(data);
+                document.getElementById("studentForm").reset();
+                window.location.href = "finish.html";
+
+             })
+             .catch(error =>{
+                console.error("เกิดข้อผิดพลาด" +error);
+                document.getElementById("studentForm").reset();
+             });
+     });
+
     }
 
