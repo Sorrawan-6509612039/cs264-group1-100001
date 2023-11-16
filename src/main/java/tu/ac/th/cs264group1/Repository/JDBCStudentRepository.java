@@ -15,7 +15,7 @@ public class JDBCStudentRepository {
     private JdbcTemplate jdbcTemplate;
 
     public void save (Student user){
-        String sql = "INSERT INTO table_name (date,nameTitle ,studentFirstname,studentLastname,studentId,studentYear," +
+        String sql = "INSERT INTO studentinfo (date,nameTitle ,studentFirstname,studentLastname,studentId,studentYear," +
                 "studentField,addressNumber,moo,tumbol,amphur,province,postalCode,mobilePhone,phone,advisor,subject,teacher,center,cause)" +
                 " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         jdbcTemplate.update(sql ,user.getDate(),user.getNameTitle(),user.getStudentFirstName(),user.getStudentLastName(),user.getStudentId(),
@@ -24,7 +24,7 @@ public class JDBCStudentRepository {
     }
 
     public List<Student> getAllStudents() {
-        String sql = "SELECT * FROM table_name";
+        String sql = "SELECT * FROM studentinfo";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Student.class));
     }
 }

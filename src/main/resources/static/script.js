@@ -105,7 +105,7 @@ function finishSubmit() {
         cause: cause
     };
 
-    fetch("http://localhost:5050/users/save", {
+    fetch("/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -117,7 +117,6 @@ function finishSubmit() {
             console.log(data);
             document.getElementById("studentForm").reset();
             window.location.href = "finish.html";
-
         })
         .catch(error => {
             console.error("เกิดข้อผิดพลาด" + error);

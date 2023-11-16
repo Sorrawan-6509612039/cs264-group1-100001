@@ -12,7 +12,7 @@ public class StudentController {
     @Autowired
     private JDBCStudentRepository studentDao;
 
-    @PostMapping
+    @RequestMapping
     public void addStudent(@RequestBody Student user) {
 
         studentDao.save(user);
