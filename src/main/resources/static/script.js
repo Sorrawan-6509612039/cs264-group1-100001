@@ -92,7 +92,7 @@ function changePage(values) {
            postalcode: postalcode,
            mobilePhone: mobilePhone,
            phone: phone,
-           advisor: advisor
+           advisor: advisor,
            subject: subject,
            teacher: teacher,
            center: center,
