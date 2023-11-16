@@ -1,4 +1,4 @@
-function submitForm() {
+function redirectToPage2() {
     window.location.href = 'index.html';
 }
 
@@ -48,7 +48,8 @@ function validateForm() {
         return false;
     }
 
-    //Check if phone is empty or not. If not empty then phone must be number and 10 digit long
+    //Check if phone is empty or not.
+    //If not empty then phone must be number and 10 digit long.
     if (phone !== "") {
         if (phone.length !== 10 || isNaN(phone)){
             alert("กรุณากรอกเบอร์โทรศัพท์บ้านเป็นตัวเลข 10 หลัก");
@@ -77,10 +78,16 @@ function finishSubmit() {
     var mobilePhone = document.getElementById("mobilePhone").value;
     var phone = document.getElementById("phone").value;
     var advisor = document.getElementById("advisor").value;
+    var cause = document.getElementById("cause").value;
+
     var subject = document.getElementById("subject").value;
     var teacher = document.getElementById("teacher").value;
     var center = document.getElementById("center").value;
-    var cause = document.getElementById("cause").value;
+
+    // Check if the elements exist and get their values if they do
+    var subject = subjectElement ? subjectElement.value : null;
+    var teacher = teacherElement ? teacherElement.value : null;
+    var center = centerElement ? centerElement.value : null;
 
     var formData = {
         date: date,
@@ -105,6 +112,9 @@ function finishSubmit() {
         cause: cause
     };
 
+    console.log("Finish Submit Function Executed");
+    console.log(formData);
+
     fetch("/users", {
         method: "POST",
         headers: {
@@ -112,7 +122,10 @@ function finishSubmit() {
         },
         body: JSON.stringify(formData)
     })
-        .then(response => response.json())
+        .then(response =>{
+            console.log("Response Status:", response.status);
+            response.json();
+        })
         .then(data => {
             console.log(data);
             document.getElementById("studentForm").reset();
