@@ -80,9 +80,9 @@ function finishSubmit() {
     var advisor = document.getElementById("advisor").value;
     var cause = document.getElementById("cause").value;
 
-    var subject = document.getElementById("subject").value;
-    var teacher = document.getElementById("teacher").value;
-    var center = document.getElementById("center").value;
+   var subjectElement = document.getElementById("subject");
+       var teacherElement = document.getElementById("teacher");
+       var centerElement = document.getElementById("center");
 
     // Check if the elements exist and get their values if they do
     var subject = subjectElement ? subjectElement.value : null;

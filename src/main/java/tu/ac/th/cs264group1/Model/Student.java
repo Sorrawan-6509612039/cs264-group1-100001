@@ -93,11 +93,11 @@ public class Student {
         this.mobilePhone = mobilePhone;
     }
 
-    public String getPostalCode() {
+    public String getPostalcode() {
         return postalcode;
     }
 
-    public void setPostalCode(String postalcode) {
+    public void setPostalcode(String postalcode) {
         this.postalcode = postalcode;
     }
 

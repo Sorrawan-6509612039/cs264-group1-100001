@@ -16,11 +16,11 @@ public class JDBCStudentRepository {
 
     public void save (Student user){
         String sql = "INSERT INTO studentinfo (date,nameTitle ,studentFirstname,studentLastname,studentId,studentYear," +
-                "studentField,addressNumber,moo,tumbol,amphur,province,postalCode,mobilePhone,phone,advisor,subject,teacher,center,cause)" +
+                "studentField,addressNumber,moo,tumbol,amphur,province,postalcode,mobilePhone,phone,advisor,subject,teacher,center,cause)" +
                 " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         jdbcTemplate.update(sql ,user.getDate(),user.getNameTitle(),user.getStudentFirstName(),user.getStudentLastName(),user.getStudentId(),
         user.getStudentYear(),user.getStudentField(),user.getAddressNumber(),user.getMoo(),user.getTumbol(),user.getAmphur(),user.getProvince(),
-        user.getPostalCode(),user.getMobilePhone(),user.getPhone(),user.getAdvisor(),user.getSubject(),user.getTeacher(),user.getCenter(),user.getCause());
+        user.getPostalcode(),user.getMobilePhone(),user.getPhone(),user.getAdvisor(),user.getSubject(),user.getTeacher(),user.getCenter(),user.getCause());
     }
 
     public List<Student> getAllStudents() {
