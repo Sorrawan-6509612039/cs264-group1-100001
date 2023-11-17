@@ -6,6 +6,5 @@ public class HelloWorld {
 		System.out.println ("Hello, My Name is Aksiporn");
 		System.out.println ("Hello, My Name is Natcha");
 		System.out.println ("Hello, My Name is Teekakarn");
-		System.out.println ("Hello, My Name is Klissana");
 	}
 }
